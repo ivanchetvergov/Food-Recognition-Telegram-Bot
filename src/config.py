@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Project root directory
 PROJECT_ROOT = Path(__file__).parent.parent
 
 @dataclass(frozen=True)
@@ -73,14 +72,4 @@ PATHS = Paths()
 MODEL_CONFIG = ModelConfig()
 API_CONFIG = APIConfig()
 
-# Food categories with metadata
-FOOD_CATEGORIES = {
-    'pizza': {'color': (255, 100, 100), 'kcal_range': (200, 350), 'avg_kcal': 275},
-    'salad': {'color': (100, 255, 100), 'kcal_range': (50, 200), 'avg_kcal': 125},
-    'burger': {'color': (139, 90, 43), 'kcal_range': (300, 600), 'avg_kcal': 450},
-    'soup': {'color': (255, 200, 100), 'kcal_range': (80, 250), 'avg_kcal': 165},
-    'pasta': {'color': (255, 220, 180), 'kcal_range': (300, 550), 'avg_kcal': 425},
-    'sushi': {'color': (255, 150, 150), 'kcal_range': (150, 350), 'avg_kcal': 250},
-    'steak': {'color': (139, 69, 19), 'kcal_range': (400, 700), 'avg_kcal': 550},
-    'dessert': {'color': (255, 182, 193), 'kcal_range': (200, 500), 'avg_kcal': 350},
-}
+

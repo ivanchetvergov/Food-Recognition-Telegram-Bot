@@ -79,7 +79,7 @@ class PredictService:
             feat_dict[f'emb_{j}'] = emb_reduced[0][j]
             
         for j in range(len(sim_scores)):
-            feat_dict[f'sim_score_{j}'] = sim_scores[j]
+            feat_dict[f'sim_score_{j}'] = g[j]
             
         X = pd.DataFrame([feat_dict])
         

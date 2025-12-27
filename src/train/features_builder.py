@@ -21,7 +21,7 @@ def build_features(dataset_csv, emb_dir, index_path, out_path):
     df = pd.read_csv(dataset_csv)
     embeddings_reduced = np.load(os.path.join(emb_dir, 'all_reduced.npy')).astype('float32')
     index = faiss.read_index(index_path)
-    
+    g
     meta_df = pd.read_csv(os.path.join(emb_dir, 'metadata.csv'))
     full_meta = meta_df.merge(df, on='image_path', how='left')
     
