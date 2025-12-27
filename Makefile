@@ -58,15 +58,6 @@ install:
 	$(PYTHON) -m pip install --upgrade pip
 	$(PYTHON) -m pip install -r requirements.txt
 
-# Generate synthetic data
-data: $(DATASET_CSV)
-
-$(DATASET_CSV): $(DATA_DIR)/gen_synthetic_food.py
-	@echo "Generating synthetic training data..."
-	@mkdir -p $(IMAGES_DIR)
-	$(PYTHON) $(DATA_DIR)/gen_synthetic_food.py
-	@echo " Generated $(DATASET_CSV)"
-
 # Extract embeddings
 embeddings: $(EMBEDDINGS_NPY)
 
